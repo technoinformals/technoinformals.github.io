@@ -1,0 +1,97 @@
+.App.scrolled .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+
+}
+
+.header {
+  width: 100vw;
+  margin: 0 auto;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #be0000, #05031f);
+  position: sticky;
+  top: 0; /* Stick the header to the top of the viewport */
+  z-index: 100; /* Adjust the z-index as needed */
+  opacity: 1;
+  transition: opacity 0.3s, 
+}
+
+
+
+/* Style the h2 element within the header */
+.header .link{  
+  font-family: 'Montserrat Alternates', monospace;
+  font-weight:700;
+  color: white;
+  font-size: 3vh;
+  padding: 1%;
+  text-align: center;
+  width: 80%;
+  text-decoration: none;
+}
+
+.header .link:hover {
+  border-color: rgb(128, 32, 69);
+  border-bottom: 0.25vh solid antiquewhite;
+  border-radius: 3%;
+  text-decoration: none;
+}
+
+.header .active-link {
+  font-family: 'Montserrat Alternates', monospace;
+  font-weight:700;
+  color: rgb(255, 255, 255);
+  font-size: 3vh;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  border-color: rgb(128, 32, 69);
+  border-bottom: 0.25vh solid white;
+  border-radius: 3%;
+  text-decoration: none;
+  width: 80%;
+}
+
+
+
+@media (max-width: 950px) {
+    .header {
+    /* Adjust styles for the header on the iPad Air */
+    width: 100vw;
+    /* Add additional styles here */
+  }
+
+  .header .link {
+    /* Adjust font size and other styles for links on the iPad Air */
+    font-size: 2vw;
+  }
+
+  .header .active-link {
+    /* Adjust font size and other styles for active links on the iPad Air */
+    font-size: 2vw;
+    border-bottom: 0.2vh solid white;
+    border-radius: 5%;
+  }
+}
+@media (max-width: 500px) {
+    .header {
+      width:100vw; /* Adjust the header height for smaller screens */
+    }
+
+    .header .link{  
+      padding: 1%;
+      text-align: center;
+      width: 90%;
+    }
+      .header .active-link {
+        font-size: 1vh; /* Adjust the font size for smaller screens */
+        border-bottom: 0.2vh solid white;
+        border-radius: 5%;
+        padding:1%;
+        
+    }
+}

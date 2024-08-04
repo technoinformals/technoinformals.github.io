@@ -1,0 +1,162 @@
+body {
+  background-color: black;
+  margin: 10;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.mainbody {
+  color: white;
+}
+
+.landing {
+  display: flex;
+  align-items: center;
+  overflow: visible; /* Use overflow: visible to ensure text remains visible */
+}
+
+.landing h1 {
+
+  font-family: 'Carter One';
+  margin-left: 50%;
+  position: relative;
+  font-size: 7.5vw;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.2em #941212;
+  user-select: none;
+  white-space: nowrap;
+  animation: shake 1.5s linear forwards;
+  overflow: visible; /* Use overflow: visible to ensure text remains visible */
+  padding-bottom: 30px;
+}
+
+
+.landing h1 span {
+
+  font-family: 'Carter One';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+  clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+.landing h1::before,
+.landing h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.landing h1::before {
+  animation: crack1 2s linear forwards;
+  -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+.landing h1::after {
+  animation: crack2 2s linear forwards;
+  -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+  clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+}
+@keyframes shake {
+  5%,   55%, 95% {
+      transform: translateY(0.018em) rotate(0deg);
+  }
+
+
+  20%, 60% {
+      filter: blur(0.05em);
+      transform: translate(-0.0em, 0.018em) rotate(0deg);
+  }
+
+  45%, 85% {
+      filter: blur(0.05em);
+      transform: translate(0.018em, -0.018em) rotate(0deg);
+  }
+
+  100% {
+      transform: translate(0) rotate(-0.5deg);
+  }
+}
+
+@keyframes crack1 {
+  0%, 95% {
+    transform: translate(-50%, -50%);
+}
+
+100% {
+    transform: translate(-51%, -48%);
+}
+}
+
+@keyframes crack2 {
+  0%, 95% {
+    transform: translate(-50%, -50%);
+}
+
+100% {
+    transform: translate(-49%, -53%);
+}
+}
+
+.content {
+  padding-left: 20%;
+  padding-right: 20%;
+  font-family: 'Orbitron', sans-serif;  
+  color: #fff;
+  font-size: larger;
+  line-height: 4vh;
+  letter-spacing: 0.1vw;
+  text-align: justify;
+  opacity: 0; /* Start with opacity 0 (fully transparent) */
+  transition: opacity 1s; /* Add a 1-second transition for opacity */
+}
+
+.fade-in {
+  opacity: 1; /* When contentVisible is true, make it fully opaque */
+  color: #fff;
+}
+
+
+.highlight{
+
+  color: #ff0202;
+  text-shadow: 5px #fff;
+  text-align: center;
+  font-size:xx-large;
+
+}
+
+.ScratchCard:nth-child(even) {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+}
+
+/* Apply flex alignment to the ScratchCard components */
+.ScratchCard:nth-child(odd) {
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+}
+.l{
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.r{
+  float: right;
+  clear: both;
+  width: 100%;
+}
