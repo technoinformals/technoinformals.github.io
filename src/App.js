@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import OurEvents from "./pages/OurEvents";
-import HighlightReel from "./pages/HighlightReel";
-import ContactUs from "./pages/ContactUs";
 import AOS from "aos";
 import "./App.css";
 import "aos/dist/aos.css";
@@ -83,8 +81,6 @@ export default function App() {
           <Route path="/" exact element={<Home/>} />
           <Route path="/about-us" element={<AboutUs/>} />
           <Route path="/our-events" element={<OurEvents/>} />
-          <Route path="/highlight-reel" element={<HighlightReel/>} />
-          <Route path="/contact-us" element={<ContactUs/>} />
         </Routes>
       </Router>
     </div>

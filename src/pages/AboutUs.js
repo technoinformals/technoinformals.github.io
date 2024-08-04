@@ -1,21 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import './AboutUs.css';
 
-import CardArrow from '@s-ui/react-card-arrow'
 
 export default function AboutUs() {
   const [contentVisible, setContentVisible] = useState(false);
-  const link = 'https://www.lorem.com/'
-
-const media = {
-  alt: 'Lorem image',
-  src: 'https://www.lorem.com/ipsum.jpg'
-}
-
-const text = {
-  title: 'Lorem',
-  description: 'Lorem ipsum dolor sit amet'
-}
   useEffect(() => {
     // Use a setTimeout to delay the visibility of content after the cracks animation
     setTimeout(() => {
@@ -41,11 +29,6 @@ const text = {
         <div className='highlight'>
           <p>we do it all!</p>
         </div>
-        <div className='flowchart'>
-        <CardArrow media={media} text={text} link={link}/>
-
-        </div>
-
       </div>
     </div>
   );
