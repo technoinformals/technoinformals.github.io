@@ -61,9 +61,9 @@ export default function App() {
           </Link>
 
           <Link
-            className={getLinkClassName("/")}
+            className={getLinkClassName("/Official-Website")}
             to="/"
-            onClick={() => handleLinkClick("/")}
+            onClick={() => handleLinkClick("/Official-Website")}
           >
             Home
           </Link>
@@ -78,7 +78,7 @@ export default function App() {
 
         </div>
         <Routes>
-          <Route path="/" exact element={<Home/>} />
+          <Route path="/Official-Website" exact element={<Home/>} />
           <Route path="/about-us" element={<AboutUs/>} />
           <Route path="/our-events" element={<OurEvents/>} />
         </Routes>
