@@ -62,7 +62,7 @@ export default function App() {
 
           <Link
             className={getLinkClassName("/Official-Website")}
-            to="/"
+            to="/Official-Website"
             onClick={() => handleLinkClick("/Official-Website")}
           >
             Home
