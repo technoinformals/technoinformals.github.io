@@ -40,14 +40,14 @@ body {
   }
   .watermark h1 {
     margin: 5%;
-    font-size: 7.5vw;
+    font-size: 7vw;
     color: rgba(255, 255, 255, 0.01);
     background-image: url("../assets/tibg.jpeg");
     -webkit-background-clip: text;
     animation: animate 10s ease-in-out infinite;
     text-align: center;
     text-transform:capitalize;
-    font-family: 'Raleway';
+    font-family: 'Orbitron', sans-serif;
   }
   
   @keyframes animate {
@@ -66,11 +66,10 @@ body {
   }
   
   .typing-animation {
-    font-size: 3vh;
+    font-size: 2.5vw;
     text-align: center;
     color:rgb(255, 255, 255);
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 0.4vh;
+    font-family: 'Raleway';
     max-width: 65%;
     opacity: 0.8;
   }
@@ -87,7 +86,6 @@ body {
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     font-size: 5vw;
-    letter-spacing: 10px;
   }
   
   .image-container {
@@ -124,7 +122,7 @@ body {
   }
   
   .image-container:hover .hover-text {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Raleway';
     font-size:1.5vh;
     max-width: 100%;
     padding: 5%;
@@ -152,7 +150,7 @@ body {
     width: 50%;
   }
   
-  @media (max-width: 950px){
+  /* @media (max-width: 950px){
     .event-grid h1 {
       font-size: 6vh;
       letter-spacing: 8px;
@@ -183,46 +181,39 @@ body {
  }
  .image-grid-container {
   height: 80%; /* Ensure the container fills the available height */
-}
+/* }
 
 .image-grid {
  width: 80%;
 }
     
     
-  }
+  }  */
   
-  @media (max-width: 480px) {
-      .header {
-        height: 6vh; /* Adjust the header height for smaller screens */
-      }
-    
-      .header .link {
-        font-size: 1.125vh; /* Adjust the font size for smaller screens */
-      }
-    
+  @media (max-aspect-ratio: 3/4) {
       .realBody{
-        height: 75vh;
+        height: 100vh;
+        width: 100vw;
+        margin:0;
       }
       .watermark img {
         width: 100%; /* Adjust the width for smaller screens */
       }
     
       .watermark h1 {
-        font-size: 4.25vh; /* Adjust font size for smaller screens */
+        font-size: 10vw;
+      }
+
+      .typing-animation {
+        max-width: 100%;
+        font-size: 4.25vw;
       }
     
       .event-grid h1 {
-        font-size: 3vh; /* Further adjust font size for smaller screens */
-        letter-spacing: 5px;
+        font-size:8vw; /* Further adjust font size for smaller screens */
+        letter-spacing: 2px;
       }
   
-      .typing-animation {
-        font-size: 1.75vh;
-        text-align:center;
-        width: 100%;
-        word-spacing: 5px;
-      }
       
     
       .image-container {
@@ -242,7 +233,7 @@ body {
       }
     
       .image-container:hover .hover-text {
-        font-size: 2vh; /* Further adjust font size for smaller screens */
+        font-size: 3.5vw; /* Further adjust font size for smaller screens */
         padding: 3%; /* Further adjust padding for smaller screens */
       }
     

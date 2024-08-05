@@ -24,10 +24,10 @@
 
 /* Style the h2 element within the header */
 .header .link{  
-  font-family: 'Montserrat Alternates', monospace;
-  font-weight:700;
-  color: white;
-  font-size: 3vh;
+  font-family: 'Orbitron', sans-serif;
+  font-weight:900;
+  color: rgba(255, 255, 255, 0.671);
+  font-size: 3.5vh;
   padding: 1%;
   text-align: center;
   width: 80%;
@@ -36,21 +36,19 @@
 
 .header .link:hover {
   border-color: rgb(128, 32, 69);
-  border-bottom: 0.25vh solid antiquewhite;
   border-radius: 3%;
   text-decoration: none;
 }
 
 .header .active-link {
-  font-family: 'Montserrat Alternates', monospace;
-  font-weight:700;
+  font-family: 'Orbitron', serif;
+  font-weight:900;
   color: rgb(255, 255, 255);
-  font-size: 3vh;
+  font-size: 3.75vh;
   padding: 1%;
   text-align: center;
   text-decoration: none;
   border-color: rgb(128, 32, 69);
-  border-bottom: 0.25vh solid white;
   border-radius: 3%;
   text-decoration: none;
   width: 80%;
@@ -58,40 +56,18 @@
 
 
 
-@media (max-width: 950px) {
+@media (max-aspect-ratio: 3/4) {
     .header {
-    /* Adjust styles for the header on the iPad Air */
     width: 100vw;
-    /* Add additional styles here */
   }
 
   .header .link {
-    /* Adjust font size and other styles for links on the iPad Air */
-    font-size: 2vw;
+    font-size: 4.5vw;
   }
 
   .header .active-link {
-    /* Adjust font size and other styles for active links on the iPad Air */
-    font-size: 2vw;
-    border-bottom: 0.2vh solid white;
+    font-size: 5vw;
     border-radius: 5%;
   }
-}
-@media (max-width: 500px) {
-    .header {
-      width:100vw; /* Adjust the header height for smaller screens */
-    }
 
-    .header .link{  
-      padding: 1%;
-      text-align: center;
-      width: 90%;
-    }
-      .header .active-link {
-        font-size: 1vh; /* Adjust the font size for smaller screens */
-        border-bottom: 0.2vh solid white;
-        border-radius: 5%;
-        padding:1%;
-        
-    }
 }

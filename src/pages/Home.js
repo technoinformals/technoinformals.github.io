@@ -25,9 +25,9 @@ const Image = ({ src, hoverData }) => {
           alt=""
           src={src}
           className={`img-responsive ${hover ? "img-hovered" : ""}`}
-        />
-        {hover && <p className="hover-text">{hoverData}</p>}
-      </div>
+        />                                                                                                         
+        {hover && <div className="hover-text">{hoverData}</div>}
+      </div>                                      
     );
   };
   
@@ -129,7 +129,6 @@ const Image = ({ src, hoverData }) => {
           <div className="watermark">
             <img src={logo} alt="Test" />
             <h1>
-              Team <br />
               TechnoInformals
             </h1>
           </div>

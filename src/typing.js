@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function TypingAnimation() {
-  const initialText = 'The Official Entertainment and Management Cluster of SASTRA University';
+  const initialText = 'The Entertainment and Management Cluster of SASTRA University.';
   const [isVisible, setIsVisible] = useState(true);
   const maxFlickerCount = 4; // Flicker twice
 

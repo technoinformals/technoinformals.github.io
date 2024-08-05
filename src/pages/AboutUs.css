@@ -13,15 +13,8 @@ body {
   color: white;
 }
 
-.landing {
-  display: flex;
-  align-items: center;
-  overflow: visible; /* Use overflow: visible to ensure text remains visible */
-}
-
 .landing h1 {
-
-  font-family: 'Carter One';
+  font-family: "Orbitron", sans-serif;
   margin-left: 50%;
   position: relative;
   font-size: 7.5vw;
@@ -37,10 +30,7 @@ body {
   padding-bottom: 30px;
 }
 
-
 .landing h1 span {
-
-  font-family: 'Carter One';
   position: absolute;
   top: 0;
   left: 0;
@@ -69,54 +59,58 @@ body {
   clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
 }
 @keyframes shake {
-  5%,   55%, 95% {
-      transform: translateY(0.018em) rotate(0deg);
+  5%,
+  55%,
+  95% {
+    transform: translateY(0.018em) rotate(0deg);
   }
 
-
-  20%, 60% {
-      filter: blur(0.05em);
-      transform: translate(-0.0em, 0.018em) rotate(0deg);
+  20%,
+  60% {
+    filter: blur(0.05em);
+    transform: translate(-0em, 0.018em) rotate(0deg);
   }
 
-  45%, 85% {
-      filter: blur(0.05em);
-      transform: translate(0.018em, -0.018em) rotate(0deg);
+  45%,
+  85% {
+    filter: blur(0.05em);
+    transform: translate(0.018em, -0.018em) rotate(0deg);
   }
 
   100% {
-      transform: translate(0) rotate(-0.5deg);
+    transform: translate(0) rotate(-0.5deg);
   }
 }
 
 @keyframes crack1 {
-  0%, 95% {
+  0%,
+  95% {
     transform: translate(-50%, -50%);
-}
+  }
 
-100% {
+  100% {
     transform: translate(-51%, -48%);
-}
+  }
 }
 
 @keyframes crack2 {
-  0%, 95% {
+  0%,
+  95% {
     transform: translate(-50%, -50%);
-}
+  }
 
-100% {
+  100% {
     transform: translate(-49%, -53%);
-}
+  }
 }
 
 .content {
   padding-left: 20%;
   padding-right: 20%;
-  font-family: 'Orbitron', sans-serif;  
+  font-family: "Raleway";
+  font-size: 2vh;
   color: #fff;
-  font-size: larger;
   line-height: 4vh;
-  letter-spacing: 0.1vw;
   text-align: justify;
   opacity: 0; /* Start with opacity 0 (fully transparent) */
   transition: opacity 1s; /* Add a 1-second transition for opacity */
@@ -127,36 +121,24 @@ body {
   color: #fff;
 }
 
-
-.highlight{
-
+.highlight {
   color: #ff0202;
   text-shadow: 5px #fff;
   text-align: center;
-  font-size:xx-large;
-
+  font-size: xx-large;
 }
 
-.ScratchCard:nth-child(even) {
-  display: flex;
-  justify-content: flex-end;
-  width: 30%;
-}
+@media (max-aspect-ratio: 3/4) {
+  .landing h1 {
+    font-size: 8vw;
+  }
 
-/* Apply flex alignment to the ScratchCard components */
-.ScratchCard:nth-child(odd) {
-  display: flex;
-  justify-content: flex-start;
-  width: 30%;
-}
-.l{
-  float: left;
-  clear: both;
-  width: 100%;
-}
-
-.r{
-  float: right;
-  clear: both;
-  width: 100%;
+  .content {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.75vh;
+  }
+  .highlight {
+    font-size: 5vw;
+  }
 }

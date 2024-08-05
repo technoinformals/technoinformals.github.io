@@ -1,39 +1,29 @@
-.our-events{
-        font-family: sans-serif;
-    text-align: center;
+.mainbody{
+  width: 100vw;
 }
-
-  .vertical-timeline::before {
+.vertical-timeline::before {
     background: rgb(255, 255, 255) !important;
   }
   
-  .empty {
-    height: 600px;
-    border: 1px solid red;
-  }
   
-  .title{
-
-  font-family: 'Orbitron', sans-serif;  
-  }
-
-.vertical-timeline-element-title h2{
+.vertical-timeline-element-title {
 
   font-family: 'Raleway';
-  text-align: center;
+  text-align: left;
+  font-size: 3vh;
   color: rgb(250, 142, 0);
 }
 .vertical-timeline-element-subtitle{
   
   font-family: 'Raleway';
-  text-align: center;
+  text-align: right;
   
 }
 
 .vertical-timeline-element-content{
-
   font-family: 'Raleway';
-  text-align: center;
+  text-align: left;
   background-color: rgb(1, 4, 20);
   border: 1px solid white;
 }
+
