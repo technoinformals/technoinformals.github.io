@@ -22,7 +22,7 @@ const OurEvents = () => {
             {event.Title}
           </div>
           <h4 className="vertical-timeline-element-subtitle">{event.Year}</h4>
-          <Carousel showThumbs="true">
+          <Carousel showThumbs={false}>
             {event["Image source"].map((src, imgIndex) => (
               <img
                 key={imgIndex}

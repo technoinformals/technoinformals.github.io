@@ -128,7 +128,12 @@ body {
   font-size: xx-large;
 }
 
-@media (max-aspect-ratio: 3/4) {
+.batchpics{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-aspect-ratio: 1/1) {
   .landing h1 {
     font-size: 8vw;
   }

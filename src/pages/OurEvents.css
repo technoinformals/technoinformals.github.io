@@ -11,14 +11,17 @@
   font-family: 'Raleway';
   text-align: left;
   font-size: 3vh;
+  font-weight: bold;
   color: rgb(250, 142, 0);
 }
 .vertical-timeline-element-subtitle{
   
   font-family: 'Raleway';
-  text-align: right;
+  text-align: left;
+  padding-bottom: 10px;
   
 }
+
 
 .vertical-timeline-element-content{
   font-family: 'Raleway';

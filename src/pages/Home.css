@@ -1,245 +1,252 @@
 body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex-direction: column;
-    width: auto;
-  }
-  
-  .realBody {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+  width: auto;
+}
 
-    min-height: 90vh;
-    align-items: center;
-    overflow: hidden;
-    flex-direction: column;
-  }
+.realBody {
+  background-color: black;
+  margin: 0;
+  padding-bottom: 20vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
 
 /* Set the watermark div to cover the entire page */
 .watermark {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    margin-top: 4vh;
-    height: auto; /* Make sure the watermark takes the full height of its container */
-    text-align: center; /* Center the text within the watermark */
-  }
-  .watermark img {
-    margin: 0;
-    opacity: 0.85;
-    object-fit: cover;
-    width: 20vw; /* Adjust the width as needed */
-  }
-  .watermark h1 {
-    margin: 5%;
-    font-size: 7vw;
-    color: rgba(255, 255, 255, 0.01);
-    background-image: url("../assets/tibg.jpeg");
-    -webkit-background-clip: text;
-    animation: animate 10s ease-in-out infinite;
-    text-align: center;
-    text-transform:capitalize;
-    font-family: 'Orbitron', sans-serif;
-  }
-  
-  @keyframes animate {
-    0%, 100% {
-      background-position: left top;
-    }
-    25%{
-      background-position: right bottom;
-     }
-    50% {
-      background-position: left bottom;
-    }
-    75% {
-      background-position: right top;
-    }   
-  }
-  
-  .typing-animation {
-    font-size: 2.5vw;
-    text-align: center;
-    color:rgb(255, 255, 255);
-    font-family: 'Raleway';
-    max-width: 65%;
-    opacity: 0.8;
-  }
-  
-  .typing-animation span {
-    display: inline-block;
-    animation: typing 0.5s steps(2, start) infinite;
-  }
-  
-  
-  
-  .event-grid h1{
-    color: antiquewhite;
-    text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 5vw;
-  }
-  
-  .image-container {
-    position: relative;
-    transition: opacity 0.8 0.3s; /* Add a smooth transition for opacity changes */
-    /*border: 2px solid #c9c0c0; /* Replace with your desired outline color */
-    padding: 2px;
-    /*border-radius: 2%;*/
-  }
-  
-  .image-container:hover {
-    opacity: 0.95; /* Reduce opacity to 80% when hovered */
-    border: 5px solid #ffffff; /* Change the border color on hover */  
-  }
-  
-  /* Define the CSS class for the image when hovered */
-  .img-responsive {
-    width: 100%; /* Adjust the width to your needs */
-    height: auto; /* Maintain the aspect ratio */
-    transition: opacity 0.1s; /* Add a smooth transition for opacity changes */
-  }
-  
-  .img-responsive.img-hovered {
-    opacity: 0.17; /* Reduce opacity to 80% when hovered */
-  }
-  
-  /* Define the CSS class for the hover text */
-  .hover-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  
-  .image-container:hover .hover-text {
-    font-family: 'Raleway';
-    font-size:1.5vh;
-    max-width: 100%;
-    padding: 5%;
-    color: white; /* Text color */
-    border-radius: 5px; /* Rounded corners */
-    display: flex; /* Flex layout for centering content */
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    transition: all 0.3s; /* Smooth transition for all properties */
-  }
-  
-  /* Define the CSS class for the grid layout */
-  .image-grid-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%; /* Ensure the container fills the available height */
-  }
-  
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5vh; /* Adjust the gap as needed */
-    width: 50%;
-  }
-  
-  /* @media (max-width: 950px){
-    .event-grid h1 {
-      font-size: 6vh;
-      letter-spacing: 8px;
-    }
-  
-    .img-responsive {
-      width: 90%;
-    }
-  
-    .watermark img {
-      width: 60vw;
-    }
-  
-    .watermark h1 {
-      font-size: 10vw;
-    }
-  
-    .typing-animation {
-      font-size: 2.5vw;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  margin-top: 4vh;
+  height: auto; /* Make sure the watermark takes the full height of its container */
+  text-align: center; /* Center the text within the watermark */
+}
+.watermark img {
+  margin: 0;
+  opacity: 0.85;
+  object-fit: cover;
+  width: 20vw; /* Adjust the width as needed */
+}
+.watermark h1 {
+  margin: 5%;
+  font-size: 7vw;
+  color: rgba(255, 255, 255, 0.01);
+  background-image: url("../assets/tibg.jpeg");
+  -webkit-background-clip: text;
+  animation: animate 10s ease-in-out infinite;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Raleway";
+}
 
-    .event-grid h1{
-      font-size: 8vw;
-    }
+@keyframes animate {
+  0%,
+  100% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right bottom;
+  }
+  50% {
+    background-position: left bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+}
 
-    .image-container:hover .hover-text {
-      font-size: 1.5vw;
- }
- .image-grid-container {
-  height: 80%; /* Ensure the container fills the available height */
-/* }
+.typing-animation {
+  font-size: 2.5vw;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Raleway";
+  max-width: 65%;
+  opacity: 0.8;
+}
+
+.typing-animation span {
+  display: inline-block;
+  animation: typing 0.5s steps(2, start) infinite;
+}
+
+.event-grid h1 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 5vw;
+}
+
+.image-container {
+  position: relative;
+  transition: opacity 0.8 0.3s; 
+  padding: 2px;
+  background: rgba(58, 7, 7, 0.445);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 2px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.image-container:hover {
+  opacity: 0.95; /* Reduce opacity to 80% when hovered */
+  border: 5px solid #ffffff; /* Change the border color on hover */
+  background: rgb(0, 0, 0);
+}
+
+/* Define the CSS class for the image when hovered */
+.img-responsive {
+  width: 100%; /* Adjust the width to your needs */
+  height: auto; /* Maintain the aspect ratio */
+  transition: opacity 0.1s; /* Add a smooth transition for opacity changes */
+}
+
+.img-responsive.img-hovered {
+  opacity: 0.17; /* Reduce opacity to 80% when hovered */
+}
+
+/* Define the CSS class for the hover text */
+.hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.image-container:hover .hover-text {
+  font-family: "Raleway";
+  font-size: 1.5vh;
+  max-width: 100%;
+  padding: 5%;
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  display: flex; /* Flex layout for centering content */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.3s; /* Smooth transition for all properties */
+}
+
+/* Define the CSS class for the grid layout */
+.image-grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%; /* Ensure the container fills the available height */
+}
 
 .image-grid {
- width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vh; /* Adjust the gap as needed */
+  width: 50%;
 }
-    
-    
-  }  */
-  
-  @media (max-aspect-ratio: 3/4) {
-      .realBody{
-        height: 100vh;
-        width: 100vw;
-        margin:0;
-      }
-      .watermark img {
-        width: 100%; /* Adjust the width for smaller screens */
-      }
-    
-      .watermark h1 {
-        font-size: 10vw;
-      }
 
-      .typing-animation {
-        max-width: 100%;
-        font-size: 4.25vw;
-      }
-    
-      .event-grid h1 {
-        font-size:8vw; /* Further adjust font size for smaller screens */
-        letter-spacing: 2px;
-      }
-  
-      
-    
-      .image-container {
-        padding: 0vh; /* Further reduce padding for smaller screens */
-        display: flex;
-        justify-content: center; /* Horizontally center the image */
-        align-items: center; /* Vertically center the image */
-        position: relative;
-      }
-    
-      .image-container:hover {
-        border: 1px solid #ffffff; /* Further adjust border size on hover for smaller screens */
-      }
-    
-      .img-responsive {
-        width: 90%; /* Further reduce image width for smaller screens */
-      }
-    
-      .image-container:hover .hover-text {
-        font-size: 3.5vw; /* Further adjust font size for smaller screens */
-        padding: 3%; /* Further adjust padding for smaller screens */
-      }
-    
-      .image-grid {
-        grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns for smaller screens */
-        gap: 1vh; /* Reduce the gap for smaller screens */
-      }
-    }
-    
+.contact-card{
+  background-color: rgb(133, 31, 31);
+  margin-top: 5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  width: 100vw;
+  color: #ffffff;
+  font-family: 'Raleway';
+
+
+}
+.main{
+  font-size: 2vw;
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 1.5%;
+  font-weight: bolder;
+}
+.contact-card .text{
+  color: #ffffff;
+  font-family: 'Raleway';
+  width: 40%;
+  font-size: 1vw;
+  display: inline-block;
+  text-align: right;
+  font-size: 1vw;
+
+}
+.contact-card img{
+  width: 50%;
+
+}
+iframe{
+  width: 40%;
+  height: 400px;
+  display: inline-block;
+  margin-left: 5%;
+  }
+  .follow-us{
+    font-size: 2.5vh;
+    text-align: center;
+    padding-top: 2.5%;
+  }
+  a{
+    text-decoration: none;
+  color: #ffffff;
+  }
+@media (max-aspect-ratio: 1/1) {
+  .realBody {
+    width: 100vw;
+    margin: 0;
+  }
+  .watermark img {
+    width: 100%; /* Adjust the width for smaller screens */
+  }
+
+  .watermark h1 {
+    font-size: 10vw;
+  }
+
+  .typing-animation {
+    max-width: 100%;
+    font-size: 4.25vw;
+  }
+
+  .event-grid h1 {
+    font-size: 8vw;               
+  }
+
+  .image-container {
+    padding: 0vh; /* Further reduce padding for smaller screens */
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    position: relative;
+  }
+
+  .image-container:hover {
+    border: 1px solid #ffffff; /* Further adjust border size on hover for smaller screens */
+  }
+
+  .img-responsive {
+    width: 90%; /* Further reduce image width for smaller screens */
+  }
+
+  .image-container:hover .hover-text {
+    font-size: 3.5vw; /* Further adjust font size for smaller screens */
+    padding: 3%; /* Further adjust padding for smaller screens */
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Adjust the number of columns for smaller screens */
+    gap: 1vh; /* Reduce the gap for smaller screens */
+  }
+}
