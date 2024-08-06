@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Official-Website/static/css/main.22e92ff1.css",
-    "main.js": "/Official-Website/static/js/main.95c06d0f.js",
+    "main.css": "/Official-Website/static/css/main.d236af80.css",
+    "main.js": "/Official-Website/static/js/main.265387a6.js",
     "static/js/787.c4b41dd4.chunk.js": "/Official-Website/static/js/787.c4b41dd4.chunk.js",
     "static/media/moneyball.png": "/Official-Website/static/media/moneyball.4d477ed637cb5385e3bd.4d477ed637cb5385e3bd.png",
     "static/media/lights7.jpg": "/Official-Website/static/media/lights7.bedcaf077673aab496e8.jpg",
@@ -13,6 +13,7 @@
     "static/media/lights3.jpg": "/Official-Website/static/media/lights3.692e8bcdc69e92dd73d3.jpg",
     "static/media/lights5.jpg": "/Official-Website/static/media/lights5.53ddabd417c7c58cdab7.jpg",
     "static/media/posters.jpg": "/Official-Website/static/media/posters.e94c01f22f4e385ddb90.jpg",
+    "static/media/2023-24.jpeg": "/Official-Website/static/media/2023-24.4fe5b59e203ce325c871.jpeg",
     "static/media/2.png": "/Official-Website/static/media/2.cbe611b063ea58ff8a4f.png",
     "static/media/3.png": "/Official-Website/static/media/3.602a52ff4ba26b20f012.png",
     "static/media/Untitled-2.png": "/Official-Website/static/media/Untitled-2.b0f2259de12e06af2614.png",
@@ -21,9 +22,10 @@
     "static/media/tibg.jpeg": "/Official-Website/static/media/tibg.2d331effeb6195852a6b.jpeg",
     "static/media/PXL_20220617_094309472.jpg": "/Official-Website/static/media/PXL_20220617_094309472.ad3765e840b35a220d31.jpg",
     "static/media/1.jpg": "/Official-Website/static/media/1.2085123bd96a2898c247.jpg",
-    "static/media/teampic.jpg": "/Official-Website/static/media/teampic.99f652a63e0be011cf5f.jpg",
+    "static/media/2022-23.jpg": "/Official-Website/static/media/2022-23.99f652a63e0be011cf5f.jpg",
     "static/media/Untitled-3.png": "/Official-Website/static/media/Untitled-3.5aff35368be14d878316.png",
     "static/media/Flowchart.png": "/Official-Website/static/media/Flowchart.82c757988c15d23e0fcc.png",
+    "static/media/2021-22.jpeg": "/Official-Website/static/media/2021-22.edbbc4e41fb34eb9f54d.jpeg",
     "static/media/Flowchart trans.png": "/Official-Website/static/media/Flowchart trans.129cf147dcb9a5de235e.png",
     "static/media/sherl.jpeg": "/Official-Website/static/media/sherl.05e3e7991163f2d143d5.jpeg",
     "static/media/Untitled-5.png": "/Official-Website/static/media/Untitled-5.f8de18f8dbc1e3f8e8b4.png",
@@ -33,16 +35,17 @@
     "static/media/Untitled-9.png": "/Official-Website/static/media/Untitled-9.79bdc1a2b130f3e34da0.png",
     "static/media/Untitled-4.png": "/Official-Website/static/media/Untitled-4.694ca85789e3dd9ab457.png",
     "static/media/glass.png": "/Official-Website/static/media/glass.5ffa81a1fee08fa22a95.png",
+    "static/media/shockpool.png": "/Official-Website/static/media/shockpool.211b28117e793f62e199.png",
     "static/media/Untitled-1.png": "/Official-Website/static/media/Untitled-1.a87cbc030d2370b8b1a4.png",
     "static/media/logo.jpg": "/Official-Website/static/media/logo.7818e9f8d772f732e677.jpg",
     "static/media/4.png": "/Official-Website/static/media/4.b91b02a484b16b4cc802.png",
     "index.html": "/Official-Website/index.html",
-    "main.22e92ff1.css.map": "/Official-Website/static/css/main.22e92ff1.css.map",
-    "main.95c06d0f.js.map": "/Official-Website/static/js/main.95c06d0f.js.map",
+    "main.d236af80.css.map": "/Official-Website/static/css/main.d236af80.css.map",
+    "main.265387a6.js.map": "/Official-Website/static/js/main.265387a6.js.map",
     "787.c4b41dd4.chunk.js.map": "/Official-Website/static/js/787.c4b41dd4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22e92ff1.css",
-    "static/js/main.95c06d0f.js"
+    "static/css/main.d236af80.css",
+    "static/js/main.265387a6.js"
   ]
 }
