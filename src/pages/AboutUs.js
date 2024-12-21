@@ -44,9 +44,8 @@ export default function AboutUs() {
         </div>
       </div>
       <div className="batchpics"
-          data-aos="zoom-in-up"
-          data-aos-delay="2500">
-      <Carousel showThumbs={false} width="700px">
+          data-aos="zoom-in-up">
+      <Carousel showThumbs={false}>
                 <div>
                     <img src={require("../assets/2023-24.jpeg") }/>
                     <p className="legend">Batch of 2023-24</p>

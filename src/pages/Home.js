@@ -158,10 +158,9 @@ export default function Home() {
         ></iframe>
 
         <div className="text">
-          <img src={spankdex}></img>
-          <br></br>
-          Aww, we gotchu!
+          Aww, <br></br>we<br></br> gotchu!
         </div>
+        <img src={spankdex}></img>
         <div className="follow-us">
           Follow us at{" "}
           <a href="https://www.instagram.com/technoinformals/">
