@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import spankdex from "../assets/shockpool.png";
 import TypingAnimation from "../typing";
-import imagesData from "../assets/grid-event-details.json"
+import imagesData from "../assets/grid-event-details.json";
 import "./Home.css";
 
 import PropTypes from "prop-types";
@@ -32,7 +32,6 @@ const Image = ({ src, hoverData }) => {
 };
 
 export default function Home() {
-  
   return (
     <div className="AboutUs">
       <div className="realBody">
@@ -52,21 +51,26 @@ export default function Home() {
           data-aos-duration="2000"
         >
           <div className="image-grid">
-          {imagesData.map((image, index) => (
-        <Image key={index} 
-        
-        src={require("../assets/" + image.src)}
-        hoverData={image.hoverData} />
-      ))}
+            {imagesData.map((image, index) => (
+              <Image
+                key={index}
+                src={require("../assets/" + image.src)}
+                hoverData={image.hoverData}
+              />
+            ))}
           </div>
         </div>
       </div>
-      <div className="contact-card" data-aos="zoom-in-up" data-aos-duration="750">
+      <div
+        className="contact-card"
+        data-aos="zoom-in-up"
+        data-aos-duration="750"
+      >
         <div className="main">Wanna know more about us?</div>
         <iframe
           src="https://www.youtube-nocookie.com/embed/uvFh0ki06Go?si=QDGlNPkjYlHAapff"
           title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
           allowFullScreen
         ></iframe>
 
