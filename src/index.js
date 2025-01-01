@@ -17,7 +17,7 @@ root.render(
       <Routes>
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/our-events" element={<OurEvents />} />
-        <Route path="/#" element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>
