@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { HashRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import OurEvents from "./pages/OurEvents";
 import AOS from "aos";
@@ -21,7 +21,7 @@ export default function App() {
 
       if (currentScrollY > prevScrollY) {
         setIsScrolled(true);
-      } else if (currentScrollY < prevScrollY+100) {
+      } else if (currentScrollY < prevScrollY + 100) {
         setIsScrolled(false);
       }
 
@@ -51,39 +51,30 @@ export default function App() {
 
   return (
     <div className={`App ${isScrolled ? "scrolled" : ""}`}>
-      <HashRouter>
-        <div className="header">
-          <Link
-            className={getLinkClassName("/about-us")}
-            to="/about-us"
-            onClick={() => handleLinkClick("/about-us")}
-          >
-            About Us
-          </Link>
+      <div className="header">
+        <Link
+          className={getLinkClassName("/about-us")}
+          to="/about-us"
+          onClick={() => handleLinkClick("/about-us")}
+        >
+          About Us
+        </Link>
 
-          <Link
-            className={getLinkClassName("/")}
-            to="/"
-            onClick={() => handleLinkClick("/")}
-          >
-            Home
-          </Link>
-          <Link
-            className={getLinkClassName("/our-events")}
-            to="/our-events"
-            onClick={() => handleLinkClick("/our-events")}
-          >
-            Our Events
-          </Link>
-
-
-        </div>
-        <Routes>
-          <Route path="/about-us" element={<AboutUs/>} />
-          <Route path="/our-events" element={<OurEvents/>} />
-          <Route path="/" exact element={<Home/>} />
-        </Routes>
-      </HashRouter>
+        <Link
+          className={getLinkClassName("/")}
+          to="/"
+          onClick={() => handleLinkClick("/")}
+        >
+          Home
+        </Link>
+        <Link
+          className={getLinkClassName("/our-events")}
+          to="/our-events"
+          onClick={() => handleLinkClick("/our-events")}
+        >
+          Our Events
+        </Link>
+      </div>
     </div>
   );
 }
