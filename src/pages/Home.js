@@ -18,10 +18,12 @@ const Image = ({ src, hoverData }) => {
   };
 
   return (
-    <div className="image-container">
+    <div
+      className="image-container"
+      onMouseEnter={onHover}
+      onMouseLeave={onHoverOver}
+    >
       <img
-        onMouseEnter={onHover}
-        onMouseLeave={onHoverOver}
         alt=""
         src={src}
         className={`img-responsive ${hover ? "img-hovered" : ""}`}
