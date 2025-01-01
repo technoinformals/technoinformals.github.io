@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "./App.css";
 import "aos/dist/aos.css";
@@ -24,26 +24,26 @@ export default function App() {
   return (
     <div className={`App ${isScrolled ? "scrolled" : ""}`}>
       <div className="header">
-        <NavLink
+        <Link
           to="/about-us"
           className={({ isActive }) => (isActive ? "active-link" : "link")}
         >
           About Us
-        </NavLink>
+        </Link>
 
-        <NavLink
+        <Link
           to="/"
           className={({ isActive }) => (isActive ? "active-link" : "link")}
         >
           Home
-        </NavLink>
+        </Link>
 
-        <NavLink
+        <Link
           to="/our-events"
           className={({ isActive }) => (isActive ? "active-link" : "link")}
         >
           Our Events
-        </NavLink>
+        </Link>
       </div>
     </div>
   );
