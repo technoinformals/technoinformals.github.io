@@ -1,79 +1,49 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { HashRouter } from "react-router-dom";
-import AboutUs from "./pages/AboutUs";
-import OurEvents from "./pages/OurEvents";
+import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "./App.css";
 import "aos/dist/aos.css";
-import Home from "./pages/Home";
-
 AOS.init();
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [prevScrollY, setPrevScrollY] = useState(0);
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollY) {
-        setIsScrolled(true);
-      } else if (currentScrollY < prevScrollY + 100) {
-        setIsScrolled(false);
-      }
-
-      setPrevScrollY(currentScrollY);
-    };
-
-    const handleRouteChange = () => {
-      setCurrentPath(window.location.pathname);
+      setIsScrolled(currentScrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("popstate", handleRouteChange);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("popstate", handleRouteChange);
     };
-  }, [prevScrollY]);
-
-  const getLinkClassName = (pathname) =>
-    pathname === currentPath ? "active-link" : "link";
-
-  // Function to handle Link clicks and update currentPath
-  const handleLinkClick = (path) => {
-    setCurrentPath(path);
-  };
+  }, []);
 
   return (
     <div className={`App ${isScrolled ? "scrolled" : ""}`}>
       <div className="header">
-        <Link
-          className={getLinkClassName("/about-us")}
+        <NavLink
           to="/about-us"
-          onClick={() => handleLinkClick("/about-us")}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
         >
           About Us
-        </Link>
+        </NavLink>
 
-        <Link
-          className={getLinkClassName("/")}
+        <NavLink
           to="/"
-          onClick={() => handleLinkClick("/")}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
         >
           Home
-        </Link>
-        <Link
-          className={getLinkClassName("/our-events")}
+        </NavLink>
+
+        <NavLink
           to="/our-events"
-          onClick={() => handleLinkClick("/our-events")}
+          className={({ isActive }) => (isActive ? "active-link" : "link")}
         >
           Our Events
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

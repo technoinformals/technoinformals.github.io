@@ -2,15 +2,13 @@ import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import "./AboutUs.css";
-import "../assets/2021-22.jpeg";
 
 export default function AboutUs() {
   const [contentVisible, setContentVisible] = useState(false);
   useEffect(() => {
-    // Use a setTimeout to delay the visibility of content after the cracks animation
     setTimeout(() => {
       setContentVisible(true);
-    }, 2500); // Adjust the delay as needed
+    }, 2500);
   }, []);
 
   return (
@@ -45,15 +43,24 @@ export default function AboutUs() {
         <div className="batchpics" data-aos="zoom-in-up">
           <Carousel showThumbs={false}>
             <div>
-              <img src={require("../assets/2023-24.jpeg")} />
+              <img
+                src={require("../assets/batch-pics/2023-24.jpeg")}
+                alt="Batch of 2023-24"
+              />
               <p className="legend">Batch of 2023-24</p>
             </div>
             <div>
-              <img src={require("../assets/2022-23.jpg")} />
+              <img
+                src={require("../assets/batch-pics/2022-23.jpg")}
+                alt="Batch of 2022-23"
+              />
               <p className="legend">Batch of 2022-23</p>
             </div>
             <div>
-              <img src={require("../assets/2021-22.jpeg")} />
+              <img
+                src={require("../assets/batch-pics/2021-22.jpeg")}
+                alt="Batch of 2021-22"
+              />
               <p className="legend">Batch of 2021-22</p>
             </div>
           </Carousel>

@@ -1,32 +1,26 @@
-.mainbody{
+.mainbody {
   width: 100vw;
 }
 .vertical-timeline::before {
-    background: rgb(255, 255, 255) !important;
-  }
-  
-  
-.vertical-timeline-element-title {
+  background: rgb(255, 255, 255) !important;
+}
 
-  font-family: 'Raleway';
+.vertical-timeline-element-title {
+  font-family: "Raleway", sans-serif;
   text-align: left;
   font-size: 3vh;
   font-weight: bold;
   color: rgb(250, 142, 0);
 }
-.vertical-timeline-element-subtitle{
-  
-  font-family: 'Raleway';
+.vertical-timeline-element-subtitle {
+  font-family: "Raleway", sans-serif;
   text-align: left;
   padding-bottom: 10px;
-  
 }
 
-
-.vertical-timeline-element-content{
-  font-family: 'Raleway';
+.vertical-timeline-element-content {
+  font-family: "Raleway", sans-serif;
   text-align: left;
   background-color: rgb(1, 4, 20);
   border: 1px solid white;
 }
-

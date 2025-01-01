@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import spankdex from "../assets/shockpool.png";
 import TypingAnimation from "../typing";
-
+import imagesData from "../assets/grid-event-details.json"
 import "./Home.css";
+
+import PropTypes from "prop-types";
 const Image = ({ src, hoverData }) => {
   const [hover, setHover] = useState(false);
 
@@ -16,12 +18,10 @@ const Image = ({ src, hoverData }) => {
   };
 
   return (
-    <div
-      className="image-container"
-      onMouseEnter={onHover}
-      onMouseLeave={onHoverOver}
-    >
+    <div className="image-container">
       <img
+        onMouseEnter={onHover}
+        onMouseLeave={onHoverOver}
         alt=""
         src={src}
         className={`img-responsive ${hover ? "img-hovered" : ""}`}
@@ -32,96 +32,7 @@ const Image = ({ src, hoverData }) => {
 };
 
 export default function Home() {
-  const images = [
-    {
-      src: require("../assets/event-red/Untitled-1.png"),
-      hoverData: (
-        <div>
-          Got beef with someone? This is the best place to dish it.
-          <br />
-          <br />
-          Jk, we serve veg only.
-        </div>
-      ),
-    },
-    {
-      src: require("../assets/event-red/Untitled-5.png"),
-      hoverData: (
-        <div>
-          Wanna frame a friend for a crime? <br />
-          <br />
-          This is where you ensure (s)he does the time.
-        </div>
-      ),
-    },
-    {
-      src: require("../assets/event-red/Untitled-9.png"),
-      hoverData: (
-        <div>
-          Save the best for the last. <br />
-          <br />
-          This. is where it all began.
-        </div>
-      ),
-    },
-    {
-      src: require("../assets/event-red/Untitled-3.png"),
-      hoverData: (
-        <div>
-          Unable to get over your past? You could get therapy...or find a
-          Portkey and hit rewind :")
-        </div>
-      ),
-    },
-
-    {
-      src: require("../assets/event-red/Untitled-2.png"),
-      hoverData: (
-        <div>
-          Got the money to invest but ain't got the balls? <br />
-          <br />
-          We got you covered xD
-        </div>
-      ),
-    },
-    {
-      src: require("../assets/event-red/Untitled-6.png"),
-      hoverData: (
-        <div>
-          Intense and fiery debates about who ought to get the most funding as
-          we lay broke.
-        </div>
-      ),
-    },
-    {
-      src: require("../assets/event-red/Untitled-7.png"),
-      hoverData: <div>If you know the storyline here, DM us plz.</div>,
-    },
-    {
-      src: require("../assets/event-red/Untitled-8.png"),
-      hoverData: (
-        <div>
-          Our coolest capture the flag event. proud. <br />
-          <br />
-          *sniffles happy tears*
-        </div>
-      ),
-    },
-    {
-      src: require("../assets/event-red/Untitled-4.png"),
-      hoverData: (
-        <div>
-          A heist involving Ukrainian spies, Russian Spies aaaaand
-          <br /> the elusive
-          <br /> <br />
-          General Put-out.
-        </div>
-      ),
-    },
-
-    // Add more image objects with different src and hover data
-  ];
-
+  
   return (
     <div className="AboutUs">
       <div className="realBody">
@@ -141,13 +52,16 @@ export default function Home() {
           data-aos-duration="2000"
         >
           <div className="image-grid">
-            {images.map((image, index) => (
-              <Image key={index} src={image.src} hoverData={image.hoverData} />
-            ))}
+          {imagesData.map((image, index) => (
+        <Image key={index} 
+        
+        src={require("../assets/" + image.src)}
+        hoverData={image.hoverData} />
+      ))}
           </div>
         </div>
       </div>
-      <div className="contact-card" data-aos="zoom-in-up">
+      <div className="contact-card" data-aos="zoom-in-up" data-aos-duration="750">
         <div className="main">Wanna know more about us?</div>
         <iframe
           src="https://www.youtube-nocookie.com/embed/uvFh0ki06Go?si=QDGlNPkjYlHAapff"
@@ -193,3 +107,7 @@ export default function Home() {
     </div>
   );
 }
+Image.propTypes = {
+  src: PropTypes.string.isRequired,
+  hoverData: PropTypes.string,
+};
