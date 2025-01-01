@@ -49,7 +49,6 @@ export default function Home() {
         <div
           className="image-grid-container"
           data-aos="zoom-in-up"
-          data-aos-delay="250"
           data-aos-duration="2000"
         >
           <div className="image-grid">
@@ -79,7 +78,7 @@ export default function Home() {
         <div className="text">
           Aww, <br></br>we<br></br> gotchu!
         </div>
-        <img src={spankdex}></img>
+        <img src={spankdex} alt="Deadpool" />
         <div className="follow-us">
           Follow us at{" "}
           <a href="https://www.instagram.com/technoinformals/">
