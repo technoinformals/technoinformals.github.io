@@ -87,14 +87,14 @@ body {
 
 .image-container {
   position: relative;
-  transition: opacity 0.8 0.3s; 
+  transition: opacity 0.8 0.3s;
   padding: 2px;
   background: rgba(58, 7, 7, 0.445);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 2px solid rgba( 255, 255, 255, 0.18 );
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 .image-container:hover {
@@ -152,56 +152,53 @@ body {
   width: 50%;
 }
 
-.contact-card{
+.contact-card {
   background-color: rgb(133, 31, 31);
   margin-top: 5%;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
   width: 100vw;
   color: #ffffff;
-  font-family: 'Raleway';
-
-
+  font-family: "Raleway";
 }
-.main{
+.main {
   font-size: 2vw;
   width: 100vw;
   text-align: center;
   padding-bottom: 1.5%;
   font-weight: bolder;
 }
-.contact-card .text{
+.contact-card .text {
   color: #ffffff;
-  font-family: 'Raleway';
-  
+  font-family: "Raleway";
+
   font-size: 3vw;
   display: inline-block;
   text-align: right;
-position: absolute;
-width: 30%;
+  position: absolute;
+  width: 30%;
 }
-.contact-card img{
+.contact-card img {
   width: 25%;
   transform: rotateY(180deg);
   float: right;
   margin-right: 5%;
-
 }
-iframe{
+iframe {
   width: 40%;
   height: 400px;
   display: inline-block;
   margin-left: 5%;
-  }
-  .follow-us{
-    font-size: 2.5vh;
-    text-align: center;
-    padding-top: 2.5%;
-  }
-  a{
-    text-decoration: none;
+}
+.follow-us {
+  font-size: 2.5vh;
+  text-align: center;
+  padding-top: 2.5%;
+}
+a {
+  text-decoration: none;
   color: #ffffff;
-  }
+}
 @media (max-aspect-ratio: 1/1) {
   .realBody {
     width: 100vw;
@@ -221,7 +218,7 @@ iframe{
   }
 
   .event-grid h1 {
-    font-size: 8vw;               
+    font-size: 8vw;
   }
 
   .image-container {
@@ -253,17 +250,22 @@ iframe{
     gap: 1vh; /* Reduce the gap for smaller screens */
   }
 
-  iframe{
-    width:90vw;
+  iframe {
+    width: 90vw;
+    height: 30vh;
   }
 
-  .main{
+  .main {
     font-size: medium;
-    padding:1rem;
+    padding: 1rem;
   }
 
-  .follow-us{
-    width:100%;
+  .follow-us {
+    width: 100%;
     font-size: medium;
+  }
+
+  svg {
+    margin-top: 0.125rem;
   }
 }

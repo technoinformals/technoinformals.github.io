@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import "./AboutUs.css";
-import "../assets/2021-22.jpeg"
+import "../assets/2021-22.jpeg";
 
 export default function AboutUs() {
   const [contentVisible, setContentVisible] = useState(false);
@@ -42,25 +42,23 @@ export default function AboutUs() {
         <div className="highlight">
           <p>we do it all!</p>
         </div>
-      </div>
-      <div className="batchpics"
-          data-aos="zoom-in-up">
-      <Carousel showThumbs={false}>
-                <div>
-                    <img src={require("../assets/2023-24.jpeg") }/>
-                    <p className="legend">Batch of 2023-24</p>
-                </div>
-                <div>
-                    <img src={require("../assets/2022-23.jpg") }/>
-                    <p className="legend">Batch of 2022-23</p>
-                </div>
-                <div>
-                    <img src={require("../assets/2021-22.jpeg") }/>
-                    <p className="legend">Batch of 2021-22</p>
-                </div>
-            </Carousel>
+        <div className="batchpics" data-aos="zoom-in-up">
+          <Carousel showThumbs={false}>
+            <div>
+              <img src={require("../assets/2023-24.jpeg")} />
+              <p className="legend">Batch of 2023-24</p>
             </div>
-      
+            <div>
+              <img src={require("../assets/2022-23.jpg")} />
+              <p className="legend">Batch of 2022-23</p>
+            </div>
+            <div>
+              <img src={require("../assets/2021-22.jpeg")} />
+              <p className="legend">Batch of 2021-22</p>
+            </div>
+          </Carousel>
+        </div>
+      </div>
     </div>
   );
 }

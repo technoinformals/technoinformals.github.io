@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { HashRouter } from 'react-router-dom';
 import AboutUs from "./pages/AboutUs";
 import OurEvents from "./pages/OurEvents";
 import AOS from "aos";
@@ -50,7 +51,7 @@ export default function App() {
 
   return (
     <div className={`App ${isScrolled ? "scrolled" : ""}`}>
-      <Router>
+      <HashRouter>
         <div className="header">
           <Link
             className={getLinkClassName("/about-us")}
@@ -61,9 +62,9 @@ export default function App() {
           </Link>
 
           <Link
-            className={getLinkClassName("/Official-Website/")}
-            to="/Official-Website/"
-            onClick={() => handleLinkClick("/Official-Website/")}
+            className={getLinkClassName("/")}
+            to="/"
+            onClick={() => handleLinkClick("/")}
           >
             Home
           </Link>
@@ -78,11 +79,11 @@ export default function App() {
 
         </div>
         <Routes>
-          <Route path="/Official-Website" exact element={<Home/>} />
+          <Route path="/" exact element={<Home/>} />
           <Route path="/about-us" element={<AboutUs/>} />
           <Route path="/our-events" element={<OurEvents/>} />
         </Routes>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
