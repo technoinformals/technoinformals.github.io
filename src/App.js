@@ -79,9 +79,9 @@ export default function App() {
 
         </div>
         <Routes>
-          <Route path="/" exact element={<Home/>} />
           <Route path="/about-us" element={<AboutUs/>} />
           <Route path="/our-events" element={<OurEvents/>} />
+          <Route path="/" exact element={<Home/>} />
         </Routes>
       </HashRouter>
     </div>
