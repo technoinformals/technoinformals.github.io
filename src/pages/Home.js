@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.svg";
 import spankdex from "../assets/shockpool.png";
 import TypingAnimation from "../typing";
 import imagesData from "../assets/grid-event-details.json";
@@ -18,7 +18,7 @@ const Image = ({ src, hoverData }) => {
   };
 
   return (
-    <div
+    <button
       className="image-container"
       onMouseEnter={onHover}
       onMouseLeave={onHoverOver}
@@ -29,9 +29,10 @@ const Image = ({ src, hoverData }) => {
         className={`img-responsive ${hover ? "img-hovered" : ""}`}
       />
       {hover && <div className="hover-text">{hoverData}</div>}
-    </div>
+    </button>
   );
-};
+  
+    };  
 
 export default function Home() {
   return (
