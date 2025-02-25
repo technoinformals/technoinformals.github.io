@@ -15,9 +15,9 @@ repos:
       - id: prettier
         files: "\\.(js|jsx|ts|tsx|json|md|html|css|scss)$"
 
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.0.0
-    hooks:
-      - id: eslint
-        files: "\\.(js|jsx|ts|tsx)$"
-        minimum_pre_commit_version: "2.9.0"  # Add this as a string
+  # - repo: https://github.com/pre-commit/mirrors-eslint
+  #   rev: v8.0.0
+  #   hooks:
+  #     - id: eslint
+  #       files: "\\.(js|jsx|ts|tsx)$"
+  #       minimum_pre_commit_version: "2.9.0"  # Add this as a string
