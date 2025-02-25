@@ -1,0 +1,8 @@
+            - name: PR Auto-assign
+  # You may pin to the exact commit or the version.
+  # uses: cam3ron2/pr-auto-assign@c4af4c1b0ec33b2bbccf427d464f5f9fac8ba1fc
+  uses: cam3ron2/pr-auto-assign@latest
+  with:
+    # comma delimited list of users/teams that will be added as reviewers. team slugs must be prepended with the org they belong to, ex 'MyOrg/Some People' will become MyOrg/some-people
+    reviewers: technoinformals
+          
