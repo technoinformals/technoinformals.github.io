@@ -107,7 +107,7 @@ body {
 .content {
   padding-left: 20%;
   padding-right: 20%;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: 2vh;
   color: #fff;
   line-height: 4vh;
@@ -128,7 +128,7 @@ body {
   font-size: xx-large;
 }
 
-.batchpics{
+.batchpics {
   max-width: 50vw;
   margin-left: auto;
   margin-right: auto;
@@ -148,7 +148,7 @@ body {
     font-size: 5vw;
   }
 
-  .batchpics{
-    max-width:80vw;
+  .batchpics {
+    max-width: 80vw;
   }
 }
