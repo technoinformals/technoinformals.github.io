@@ -12,3 +12,5 @@ jobs:
         uses: cam3ron2/pr-auto-assign@latest
         with:
           reviewers: technoinformals, Better-Stay-Unknown
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Add this line
