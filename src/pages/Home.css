@@ -204,7 +204,7 @@ a {
     width: 100vw;
     margin: 0;
   }
-  .watermark svg {
+  .watermark img {
     width: 100%; /* Adjust the width for smaller screens */
   }
 

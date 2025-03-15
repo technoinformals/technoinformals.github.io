@@ -38,7 +38,7 @@ export default function Home() {
     <div className="AboutUs">
       <div className="realBody">
         <div className="watermark">
-        <img src={logo} alt="Test" />
+          <img src={logo} alt="Test" />
           <h1>TechnoInformals</h1>
         </div>
         <TypingAnimation />
