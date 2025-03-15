@@ -40,7 +40,7 @@ body {
   margin: 5%;
   font-size: 7vw;
   color: rgba(255, 255, 255, 0.01);
-  background-image: url("../assets/tibg.jpeg");
+  background-image: url("../assets/tibg.avif");
   -webkit-background-clip: text;
   animation: animate 10s ease-in-out infinite;
   text-align: center;
@@ -204,7 +204,7 @@ a {
     width: 100vw;
     margin: 0;
   }
-  .watermark img {
+  .watermark svg {
     width: 100%; /* Adjust the width for smaller screens */
   }
 
