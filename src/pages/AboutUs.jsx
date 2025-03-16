@@ -44,21 +44,24 @@ export default function AboutUs() {
           <Carousel showThumbs={false}>
             <div>
               <img
-                src={require("../assets/batch-pics/2023-24.jpeg")}
+                              src={new URL("../assets/batch-pics/2023-24.jpeg", import.meta.url).href}
+
                 alt="Batch of 2023-24"
               />
               <p className="legend">Batch of 2023-24</p>
             </div>
             <div>
               <img
-                src={require("../assets/batch-pics/2022-23.jpg")}
+                              src={new URL("../assets/batch-pics/2022-23.jpeg", import.meta.url).href}
+
                 alt="Batch of 2022-23"
               />
               <p className="legend">Batch of 2022-23</p>
             </div>
             <div>
               <img
-                src={require("../assets/batch-pics/2021-22.jpeg")}
+src={new URL("../assets/batch-pics/2021-22.jpeg", import.meta.url).href}
+
                 alt="Batch of 2021-22"
               />
               <p className="legend">Batch of 2021-22</p>

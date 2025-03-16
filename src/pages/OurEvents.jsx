@@ -29,7 +29,7 @@ const OurEvents = () => {
               {event["Image source"].map((src, imgIndex) => (
                 <img
                   key={imgIndex}
-                  src={require("../assets/" + src)}
+                  src={new URL("../assets/" + src, import.meta.url).href}
                   alt={`${imgIndex + 1}`}
                 />
               ))}
