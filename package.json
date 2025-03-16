@@ -9,14 +9,20 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "aos": "^2.3.4",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.3.0",
     "react-scripts": "^5.0.1",
     "react-vertical-timeline-component": "^3.5.3",
+    "vite": "^6.2.2",
     "web-vitals": "^4.2.4"
   },
+  "overrides": {
+    "react-intersection-observer": "^9.0.0"
+  },  
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -24,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
+  },  
   "eslintConfig": {
     "extends": [
       "react-app",
