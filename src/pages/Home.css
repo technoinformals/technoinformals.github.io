@@ -178,6 +178,7 @@ body {
   font-size: 3vw;
   display: block;
   width: 30%;
+  
 }
 .contact-card img {
   width: 45%;
@@ -240,7 +241,7 @@ a {
   .image-container:hover .hover-text {
     font-size: 3.5vw; /* Further adjust font size for smaller screens */
     padding: 3%; /* Further adjust padding for smaller screens */
-  }
+ }
 
   .image-grid {
     grid-template-columns: repeat(
