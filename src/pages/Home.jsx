@@ -55,7 +55,7 @@ export default function Home() {
             {imagesData.map((image, index) => (
               <Image
                 key={index}
-                src={require("../assets/" + image.src)}
+                src={new URL("../assets/" + image.src, import.meta.url).href}
                 hoverData={image.hoverData}
               />
             ))}
