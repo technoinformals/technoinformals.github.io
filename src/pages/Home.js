@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.svg";
-import spankdex from "../assets/shockpool.png";
+import spankdex from "../assets/shockpool.avif";
 import TypingAnimation from "../typing";
 import imagesData from "../assets/grid-event-details.json";
 import "./Home.css";
@@ -31,15 +31,14 @@ const Image = ({ src, hoverData }) => {
       {hover && <div className="hover-text">{hoverData}</div>}
     </button>
   );
-  
-    };  
+};
 
 export default function Home() {
   return (
     <div className="AboutUs">
       <div className="realBody">
         <div className="watermark">
-          <img src={logo} alt="Test" />
+          <img loading="eager" src={logo} alt="TechnoInformals Logo" />
           <h1>TechnoInformals</h1>
         </div>
         <TypingAnimation />
@@ -69,17 +68,21 @@ export default function Home() {
         data-aos-duration="750"
       >
         <div className="main">Wanna know more about us?</div>
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/uvFh0ki06Go?si=QDGlNPkjYlHAapff"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-          allowFullScreen
-        ></iframe>
+        <div className="info-card">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/uvFh0ki06Go?si=QDGlNPkjYlHAapff"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+            allowFullScreen
+          ></iframe>
 
-        <div className="text">
-          Aww, <br></br>we<br></br> gotchu!
+          <div className="text">
+            <span>Aww,</span>
+            <span>we</span>
+            <span>gotchu!</span>
+          </div>
+          <img src={spankdex} alt="Deadpool" />
         </div>
-        <img src={spankdex} alt="Deadpool" />
         <div className="follow-us">
           Follow us at{" "}
           <a href="https://www.instagram.com/technoinformals/">
