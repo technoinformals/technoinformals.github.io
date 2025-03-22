@@ -1,3 +1,4 @@
+/* General Layout */
 body {
   background-color: black;
   margin: 0;
@@ -11,7 +12,7 @@ body {
   width: auto;
 }
 
-.realBody {
+.main-content {
   background-color: black;
   margin: 0;
   padding-bottom: 20vh;
@@ -21,22 +22,24 @@ body {
   flex-direction: column;
 }
 
-/* Set the watermark div to cover the entire page */
-.watermark {
+/* Watermark Section */
+.watermark-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
+  align-items: center;
   margin-top: 4vh;
-  height: auto; /* Make sure the watermark takes the full height of its container */
-  text-align: center; /* Center the text within the watermark */
+  height: auto;
+  text-align: center;
 }
-.watermark img {
+
+.watermark-logo {
   margin: 0;
   opacity: 0.85;
   object-fit: cover;
-  width: 20vw; /* Adjust the width as needed */
+  width: 20vw;
 }
-.watermark h1 {
+
+.watermark-title {
   margin: 5%;
   font-size: 7vw;
   color: rgba(255, 255, 255, 0.01);
@@ -73,19 +76,20 @@ body {
   opacity: 0.8;
 }
 
-.typing-animation span {
+.typing-text span {
   display: inline-block;
   animation: typing 0.5s steps(2, start) infinite;
 }
 
-.event-grid h1 {
+/* Event Grid Section */
+.event-section-title {
   color: rgb(255, 255, 255);
   text-align: center;
   font-family: "Orbitron", sans-serif;
   font-size: 5vw;
 }
 
-.image-container {
+.image-card {
   position: relative;
   transition: opacity 0.8 0.3s;
   padding: 2px;
@@ -97,25 +101,23 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
-.image-container:hover {
-  opacity: 0.95; /* Reduce opacity to 80% when hovered */
-  border: 5px solid #ffffff; /* Change the border color on hover */
+.image-card:hover {
+  opacity: 0.95;
+  border: 5px solid #ffffff;
   background: rgb(0, 0, 0);
 }
 
-/* Define the CSS class for the image when hovered */
-.img-responsive {
-  width: 100%; /* Adjust the width to your needs */
-  height: auto; /* Maintain the aspect ratio */
-  transition: opacity 0.1s; /* Add a smooth transition for opacity changes */
+.image {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.1s;
 }
 
-.img-responsive.img-hovered {
-  opacity: 0.17; /* Reduce opacity to 80% when hovered */
+.image-hovered {
+  opacity: 0.17;
 }
 
-/* Define the CSS class for the hover text */
-.hover-text {
+.hover-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -123,36 +125,36 @@ body {
   bottom: 0;
 }
 
-.image-container:hover .hover-text {
+.image-card:hover .hover-overlay {
   font-family: "Raleway", sans-serif;
   font-size: 1.5vh;
   max-width: 100%;
   padding: 5%;
-  color: white; /* Text color */
-  border-radius: 5px; /* Rounded corners */
-  display: flex; /* Flex layout for centering content */
+  color: white;
+  border-radius: 5px;
+  display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  transition: all 0.3s; /* Smooth transition for all properties */
+  transition: all 0.3s;
 }
 
-/* Define the CSS class for the grid layout */
-.image-grid-container {
+.image-grid-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%; /* Ensure the container fills the available height */
+  height: 50%;
 }
 
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5vh; /* Adjust the gap as needed */
+  gap: 5vh;
   width: 50%;
 }
 
-.contact-card {
+/* Contact Section */
+.contact-section {
   position: relative;
   background-color: rgb(133, 31, 31);
   margin-top: 5%;
@@ -162,113 +164,121 @@ body {
   color: #ffffff;
   font-family: "Raleway", sans-serif;
 }
-.main {
+
+.contact-header {
   font-size: 2vw;
   width: 100vw;
   text-align: center;
   padding-bottom: 1.5%;
   font-weight: bolder;
 }
-.info-card {
+
+.contact-info {
   display: flex;
   max-width: 100vw;
 }
-.text span {
+
+.contact-text span {
   font-family: "Raleway", sans-serif;
   font-size: 3vw;
   display: block;
   width: 30%;
-  
 }
-.contact-card img {
+
+.contact-image {
   width: 45%;
   transform: rotateY(180deg);
   margin-right: 10%;
 }
-iframe {
+
+.contact-iframe {
   width: 80%;
   height: 400px;
   margin-left: 5%;
   margin-right: 10%;
 }
-.follow-us {
+
+.social-links {
   font-size: 2.5vh;
   text-align: center;
   padding-top: 2.5%;
 }
-a {
+
+.social-links a {
   text-decoration: none;
   color: #ffffff;
 }
+
+/* Responsive Design */
 @media (max-aspect-ratio: 1/1) {
-  .realBody {
+  .main-content {
     width: 100vw;
     margin: 0;
   }
-  .watermark img {
-    width: 100%; /* Adjust the width for smaller screens */
+
+  .watermark-logo {
+    width: 100%;
   }
 
-  .watermark h1 {
+  .watermark-title {
     font-size: 10vw;
   }
 
-  .typing-animation {
+  .typing-text {
     max-width: 100%;
     font-size: 4.25vw;
   }
 
-  .event-grid h1 {
+  .event-section-title {
     font-size: 8vw;
   }
 
-  .image-container {
-    padding: 0vh; /* Further reduce padding for smaller screens */
+  .image-card {
+    padding: 0vh;
     display: flex;
-    justify-content: center; /* Horizontally center the image */
-    align-items: center; /* Vertically center the image */
+    justify-content: center;
+    align-items: center;
     position: relative;
   }
 
-  .image-container:hover {
-    border: 1px solid #ffffff; /* Further adjust border size on hover for smaller screens */
+  .image-card:hover {
+    border: 1px solid #ffffff;
   }
 
-  .img-responsive {
-    width: 90%; /* Further reduce image width for smaller screens */
+  .image {
+    width: 90%;
   }
 
-  .image-container:hover .hover-text {
-    font-size: 3.5vw; /* Further adjust font size for smaller screens */
-    padding: 3%; /* Further adjust padding for smaller screens */
- }
+  .image-card:hover .hover-overlay {
+    font-size: 3.5vw;
+    padding: 3%;
+  }
 
   .image-grid {
-    grid-template-columns: repeat(
-      1,
-      1fr
-    ); /* Adjust the number of columns for smaller screens */
-    gap: 1vh; /* Reduce the gap for smaller screens */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1vh;
   }
 
-  iframe {
+  .contact-iframe {
     width: 90vw;
     height: 30vh;
     margin-left: 10%;
   }
 
-  .info-card .text {
+  .contact-info .contact-text {
     display: none;
   }
-  .info-card img {
+
+  .contact-info .contact-image {
     display: none;
   }
-  .main {
+
+  .contact-header {
     font-size: medium;
     padding: 1rem;
   }
 
-  .follow-us {
+  .social-links {
     width: 100%;
     font-size: medium;
   }

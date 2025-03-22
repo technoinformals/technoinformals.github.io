@@ -19,35 +19,35 @@ const Image = ({ src, hoverData }) => {
 
   return (
     <button
-      className="image-container"
+      className="image-card"
       onMouseEnter={onHover}
       onMouseLeave={onHoverOver}
     >
       <img
         alt=""
         src={src}
-        className={`img-responsive ${hover ? "img-hovered" : ""}`}
+        className={`image ${hover ? "image-hovered" : ""}`}
       />
-      {hover && <div className="hover-text">{hoverData}</div>}
+      {hover && <div className="hover-overlay">{hoverData}</div>}
     </button>
   );
 };
 
 export default function Home() {
   return (
-    <div className="AboutUs">
-      <div className="realBody">
-        <div className="watermark">
-          <img loading="eager" src={logo} alt="TechnoInformals Logo" />
-          <h1>TechnoInformals</h1>
+    <div className="about-us">
+      <div className="main-content">
+        <div className="watermark-container">
+          <img loading="eager" src={logo} alt="TechnoInformals Logo" className="watermark-logo" />
+          <h1 className="watermark-title">TechnoInformals</h1>
         </div>
         <TypingAnimation />
       </div>
 
-      <div className="event-grid" data-aos="fade-up" data-aos-duration="750">
-        <h1>The Creators of</h1>
+      <div className="event-section" data-aos="fade-up" data-aos-duration="750">
+        <h1 className="event-section-title">The Creators of</h1>
         <div
-          className="image-grid-container"
+          className="image-grid-wrapper"
           data-aos="zoom-in-up"
           data-aos-duration="2000"
         >
@@ -63,27 +63,28 @@ export default function Home() {
         </div>
       </div>
       <div
-        className="contact-card"
+        className="contact-section"
         data-aos="zoom-in-up"
         data-aos-duration="750"
       >
-        <div className="main">Wanna know more about us?</div>
-        <div className="info-card">
+        <div className="contact-header">Wanna know more about us?</div>
+        <div className="contact-info">
           <iframe
             src="https://www.youtube-nocookie.com/embed/uvFh0ki06Go?si=QDGlNPkjYlHAapff"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
             allowFullScreen
+            className="contact-iframe"
           ></iframe>
 
-          <div className="text">
+          <div className="contact-text">
             <span>Aww,</span>
             <span>we</span>
             <span>gotchu!</span>
           </div>
-          <img src={spankdex} alt="Deadpool" />
+          <img src={spankdex} alt="Deadpool" className="contact-image" />
         </div>
-        <div className="follow-us">
+        <div className="social-links">
           Follow us at{" "}
           <a href="https://www.instagram.com/technoinformals/">
             <svg
